@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
     var stringAnsw = ('The sum of ' + a + ' and ' + b + ' is ' + sumTot + '.');
     newArray.push(sumTot);
     newArray.push(stringAnsw);
-    // console.log(newArray);
+    console.log(newArray);
 
     return(newArray);
     
@@ -85,12 +85,20 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var summingArray = [];
+    // console.log('Sum Array is',( sum(sumArr[0], sumArr[1])[0]) + sumArr[2]);
+    var theSum = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+    // console.log(theSum)
+     var sumStr = (sumArr[0] + ',' + sumArr[1] +',' + sumArr[2] + ' was passed in as an array of numbers, and ' + theSum + ' is their sum.')
+     summingArray.push(theSum, sumStr);
+    
+    return(summingArray)
+    
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
