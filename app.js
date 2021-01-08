@@ -7,11 +7,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+    var newArray = [];
+    var sumTot = a + b;
+    var stringAnsw = ('The sum of ' + a + ' and ' + b + ' is ' + sumTot + '.');
+    newArray.push(sumTot);
+    newArray.push(stringAnsw);
+    // console.log(newArray);
+
+    return(newArray);
+    
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+ testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -109,4 +118,4 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
-© 2021 GitHub, Inc.
+// © 2021 GitHub, Inc.
